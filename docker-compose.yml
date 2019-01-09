@@ -21,3 +21,9 @@ services:
       - "80:80"
     depends_on:
       - app
+  smart:
+    build:
+      context: .
+      dockerfile: Dockerfile-smart
+    ports:
+      - "8080:80"

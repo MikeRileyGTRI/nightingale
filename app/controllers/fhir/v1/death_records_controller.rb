@@ -89,6 +89,7 @@ class Fhir::V1::DeathRecordsController < ActionController::API
 
   # Allow cross-origin requests
   def cors_headers
+    puts 'lol'
     headers['Access-Control-Allow-Origin'] = '*'
     headers['Access-Control-Allow-Headers'] = '*'
     headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
