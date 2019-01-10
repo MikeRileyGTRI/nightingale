@@ -22,7 +22,8 @@ WORKDIR $RAILS_ROOT
 # Gems:
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
-RUN gem install bundler -v 1.17.3 && bundle install --jobs 20 --retry 5 --without development test
+RUN gem install bundler -v "< 2.0"
+RUN bundle install --retry 5 --without development test
 
 COPY config/puma.rb config/puma.rb
 
