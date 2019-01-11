@@ -57,7 +57,7 @@ class StepContent < ApplicationRecord
           option = content['option'].present? ? [content['option']] : []
           begin
             specify = content['specify'].present? ? JSON.parse(content['specify']) : []
-          raise
+          rescue
             specify = []
           end
           # Grab the (potential) text inputs for radio/checkbox selections
